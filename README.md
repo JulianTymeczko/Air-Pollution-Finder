@@ -2,14 +2,16 @@
 
 ## Project Name
 
-Air-Quality-Finder by your air bnb
+Air-Air B&B
 
 ## Project Description
+
+In a world where climate change is impacting our day to day lives in an increasing amount, soon an added step to your travels will be not only to check the relative safety of a location but also the environmental safety as air qualities change alongside our planets health.
 
 API 1 takes a user input for a city/location they want to Air B&B, which then interacts with API2 to get air quality in that city/location.
 
 Target Audience:
-Travel? Health and wellness? Pollen content?
+Travel + Health and wellness
 
 ## User Story
 
