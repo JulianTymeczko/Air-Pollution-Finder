@@ -2,11 +2,14 @@
 
 ## Project Name
 
-Air-Quality-Finder
+Air-Quality-Finder by your air bnb
 
 ## Project Description
 
-API 1 takes a user input for a city/location, which then interacts with API2 to get air quality in that city/location.
+API 1 takes a user input for a city/location they want to Air B&B, which then interacts with API2 to get air quality in that city/location.
+
+Target Audience:
+Travel? Health and wellness? Pollen content?
 
 ## User Story
 
@@ -16,15 +19,16 @@ AS a USER I want to see a polished UI, which reacts dynamically to my input.
 
 ## BREAK DOWN
 
-who does what
+UI design - Julian
+Air B&B - Sam
+Air Quality-Mukhtaar
 
 ## TODO
 
 possible2
 [air polution](https://rapidapi.com/apidojo/api/airvisual1/) PERSON1
 possible1
-[spott](https://www.spott.dev/)PERSON2
-
+[air b&B](https://rapidapi.com/3b-data-3b-data-default/api/airbnb13/)
 Site Design PERSON3(?)
 
 API TO USE?
