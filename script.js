@@ -1,10 +1,5 @@
 
-function abbrevName(name) {
-    x = name.split(" ")
-    y = `${x[0][0]}`.toUpperCase() + "." + `${x[1][0]}`.toUpperCase()
-    console.log(y);
-}
-abbrevName("julian houle");
+
 // HEY SO tara and i spoke and we should create branches off of the develop branch, not main. Imagine main as an active site 
 //and we should only push when everything works in develop branch. 
 
