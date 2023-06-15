@@ -23,4 +23,23 @@ h1 span {
     height:600px;
 
 }
-  
+#confirmBtn{
+    background-color: burlywood;
+    border-radius: 6px;
+}
+.locations{
+    text-align: center;
+    
+}
+#BB1,#BB1-title,#BB1-URL{
+    background-color: burlywood;
+}
+#BB2,#BB2-title,#BB2-URL{
+    background-color: rgb(221, 168, 97);
+}
+#BB3,#BB3-title,#BB3-URL{
+    background-color: bisque;
+}
+#BB1-Sec,#BB2-Sec,#BB3-Sec{
+    list-style: none;
+}
