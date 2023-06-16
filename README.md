@@ -25,6 +25,9 @@ UI design - Julian
 Air B&B - Sam
 Air Quality-Mukhtaar
 
+## Resources
+[AQI scores](https://www.airnow.gov/aqi/aqi-basics/)
+
 ## TODO
 
 possible2

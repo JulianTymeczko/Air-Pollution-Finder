@@ -39,45 +39,50 @@ var BB3Rate = $('#BB3-rate');
 
 
 
-confirmBtn.on('click', function () {
+confirmBtn.on('click', function (event) {
+    event.preventDefault();
     placeSearched = inputEl.val();
-    localStorage.setItem('placeSearched', placeSearched);
+    getAirBB(placeSearched);
+    getAirQual(placeSearched);
 })
 
-var airBBLocal = localStorage.getItem('placeSearched', placeSearched);
+// var cityName = localStorage.getItem('placeSearched', placeSearched);
 var airBBCheckIn;
 var airBBCheckOut;
 var airBBCurrency;
 var airBBAdults;
-var airBBURL = 'https://airbnb13.p.rapidapi.com/search-location?location=' + airBBLocal + '&checkin=2023-09-16&checkout=2023-09-17&adults=1&children=0&infants=0&pets=0&page=1&currency=USD';
-var options = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': 'ae08d2c7aamsh4fd412178cbea50p19da57jsn684468612f6d',
-        'X-RapidAPI-Host': 'airbnb13.p.rapidapi.com'
-    }
-};
-fetch(airBBURL, options)
-    .then(function (response) { return response.json(); })
-    .then(function (airBBData) {
-        console.log('airBB data below: ');
-        console.log(airBBData);
-        var firstURL = (airBBData.results[0].url);
-        var secondURL = (airBBData.results[1].url);
-        var thirdURL = (airBBData.results[2].url);
+function getAirBB(cityName) {
+    var airBBURL = 'https://airbnb13.p.rapidapi.com/search-location?location=' + cityName + '&checkin=2023-09-16&checkout=2023-09-17&adults=1&children=0&infants=0&pets=0&page=1&currency=USD';
+    var options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'ae08d2c7aamsh4fd412178cbea50p19da57jsn684468612f6d',
+            'X-RapidAPI-Host': 'airbnb13.p.rapidapi.com'
+        }
+    };
+
+    fetch(airBBURL, options)
+        .then(function (response) { return response.json(); })
+        .then(function (airBBData) {
+            console.log('airBB data below: ');
+            console.log(airBBData);
+            var firstURL = (airBBData.results[0].url);
+            var secondURL = (airBBData.results[1].url);
+            var thirdURL = (airBBData.results[2].url);
 
 
-        BB1.text(airBBData.results[0].address);
-        BB2.text(airBBData.results[1].address);
-        BB3.text(airBBData.results[2].address);
-        BB1Title.text(airBBData.results[0].name);
-        BB2Title.text(airBBData.results[1].name);
-        BB3Title.text(airBBData.results[2].name);
-        BB1URL.text(airBBData.results[0].url);
-        BB1URL.href = firstURL;
-        BB2URL.text(airBBData.results[1].url);
-        BB3URL.text(airBBData.results[2].url);
+            BB1.text(airBBData.results[0].address);
+            BB2.text(airBBData.results[1].address);
+            BB3.text(airBBData.results[2].address);
+            BB1Title.text(airBBData.results[0].name);
+            BB2Title.text(airBBData.results[1].name);
+            BB3Title.text(airBBData.results[2].name);
+            BB1URL.text(airBBData.results[0].url);
+            BB1URL.href = firstURL;
+            BB2URL.text(airBBData.results[1].url);
+            BB3URL.text(airBBData.results[2].url);
 
 
 
-    });
+        });
+}
