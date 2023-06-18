@@ -50,9 +50,7 @@ function getAirBB(cityName) {
         .then(function (airBBData) {
             console.log('airBB data below: ');
             console.log(airBBData);
-            var firstURL = (airBBData.results[0].url);
-            var secondURL = (airBBData.results[1].url);
-            var thirdURL = (airBBData.results[2].url);
+        
 
 
 
@@ -63,7 +61,6 @@ function getAirBB(cityName) {
             BB2Title.text(airBBData.results[1].name);
             BB3Title.text(airBBData.results[2].name);
             BB1URL.text(airBBData.results[0].url);
-            BB1URL.setAttribute('href', firstURL);
             BB2URL.text(airBBData.results[1].url);
             BB3URL.text(airBBData.results[2].url);
 

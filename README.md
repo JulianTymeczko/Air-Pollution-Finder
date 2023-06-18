@@ -4,6 +4,7 @@
 
 Air-/Air B&B
 
+![ScreenShot](./ScreenShot.png)
 ## Project Description
 
 In a world where climate change is impacting our day to day lives in an increasing amount, soon an added step to your travels will not only be to check the relative safety of a location but also the environmental safety as air qualities change alongside our planets health.
