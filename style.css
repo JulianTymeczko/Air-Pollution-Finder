@@ -1,9 +1,11 @@
 header {
+    /*Sets tthe header spacing and color*/
     background-color: #f1f1f1;
     padding: 20px;
 }
 
 h1 {
+    /*Styles the sites title*/
     font-family: 'Arial', sans-serif;
     font-size: 70px;
     color: #4b3838;
@@ -33,6 +35,7 @@ h1 span {
 }
 
 .custom-main {
+    /*Sets the sites background*/
     background-image: url(project\ 1\ background.jpg);
     opacity: .5;
     height: 600px;
@@ -40,11 +43,13 @@ h1 span {
 }
 
 #confirmBtn {
+    /*Styles the search button next to city search form*/
     background-color: burlywood;
     border-radius: 6px;
 }
 
 .locations {
+    /*Centers the locations content*/
     text-align: center;
 
 }
@@ -52,24 +57,28 @@ h1 span {
 #BB1,
 #BB1-title,
 #BB1-URL {
+    /*Sets the background color for the first set of place content*/
     background-color: burlywood;
 }
 
 #BB2,
 #BB2-title,
 #BB2-URL {
+    /*Sets the background color for the second set of place content*/
     background-color: rgb(221, 168, 97);
 }
 
 #BB3,
 #BB3-title,
 #BB3-URL {
+    /*Sets the background color for the third set of place content*/
     background-color: bisque;
 }
 
 #BB1-Sec,
 #BB2-Sec,
 #BB3-Sec {
+    /*Removes list bullets*/
     list-style: none;
 }
 
@@ -77,44 +86,53 @@ h1 span {
 
 
 #typeWriter {
+    /*Styles fonts*/
     font-size: 40px;
     font-family: monospace;
 
 }
 
 #typeWriter::before {
+    /*Adds styled content to typewritter id*/
     content: " | ";
 }
 
 
 ::-webkit-scrollbar {
+    /*styles scroll bar */
     width: 8px;
 }
 
 ::-webkit-scrollbar-track {
+    /*styles scroll bar */
     background-color: #171717;
 }
 
 ::-webkit-scrollbar-thumb {
+    /*styles scroll bar */
     background-color: burlywood;
     border-radius: 10px;
 }
 
 #airQual {
+    /*Styles the air quality box content*/
     color: white;
     background-color: #4b3838;
     width: fit-content;
 }
 
 #GOOD {
+    /*Stles the good text in AQI box content*/
     color: greenyellow;
 }
 
 #MODERATE {
+    /*Stles the moderate text in AQI box content*/
     color: yellow;
 }
 
 #UNHEALTHY {
+    /*Stles the unhealthy text in AQI box content*/
     color: red;
     font-weight: 800;
 }

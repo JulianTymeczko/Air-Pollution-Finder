@@ -1,23 +1,5 @@
 
-
-
-
-// HEY SO tara and i spoke and we should create branches off of the develop branch, not main. Imagine main as an active site 
-//and we should only push when everything works in develop branch. 
-
-
-
-
-
-
-
-
-
-
-
-
-// Here Sam is working out his fetch
-//airbb has alot of query items we could possibly use.
+//Here we call our HTML elements into the javascript file
 var inputEl = $('#subLoc');
 var confirmBtn = $('#confirmBtn');
 var placeSearched = inputEl.textContent;
@@ -39,6 +21,7 @@ var BB3Rate = $('#BB3-rate');
 
 
 
+// This searches for the town input into the form space.
 confirmBtn.on('click', function (event) {
     event.preventDefault();
     placeSearched = inputEl.val();
@@ -51,6 +34,7 @@ var airBBCheckIn;
 var airBBCheckOut;
 var airBBCurrency;
 var airBBAdults;
+//This function uses the city searched by the user to get three air bnb locations in that city.
 function getAirBB(cityName) {
     var airBBURL = 'https://airbnb13.p.rapidapi.com/search-location?location=' + cityName + '&checkin=2023-09-16&checkout=2023-09-17&adults=1&children=0&infants=0&pets=0&page=1&currency=USD';
     var options = {
@@ -60,7 +44,7 @@ function getAirBB(cityName) {
             'X-RapidAPI-Host': 'airbnb13.p.rapidapi.com'
         }
     };
-
+    //this fetch asks the Airbnb API to loads its content from the rapid api site
     fetch(airBBURL, options)
         .then(function (response) { return response.json(); })
         .then(function (airBBData) {
@@ -71,6 +55,7 @@ function getAirBB(cityName) {
             var thirdURL = (airBBData.results[2].url);
 
 
+
             BB1.text(airBBData.results[0].address);
             BB2.text(airBBData.results[1].address);
             BB3.text(airBBData.results[2].address);
@@ -78,7 +63,7 @@ function getAirBB(cityName) {
             BB2Title.text(airBBData.results[1].name);
             BB3Title.text(airBBData.results[2].name);
             BB1URL.text(airBBData.results[0].url);
-            BB1URL.href = firstURL;
+            BB1URL.setAttribute('href', firstURL);
             BB2URL.text(airBBData.results[1].url);
             BB3URL.text(airBBData.results[2].url);
 

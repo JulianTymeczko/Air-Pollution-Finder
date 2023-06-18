@@ -1,4 +1,4 @@
-
+//this function uses the input city name from the users search to check for the air quality of that city.
 function getAirQual(cityName) {
 
     var url = 'https://airvisual1.p.rapidapi.com/v2/auto-complete?q=' + cityName + '&x-user-lang=en-US&x-aqi-index=us&x-units-pressure=mbar&x-units-distance=kilometer&x-units-temperature=celsius';
@@ -10,6 +10,7 @@ function getAirQual(cityName) {
         }
     };
     console.log(cityName);
+    //this fetch gets data from the rapid api library site.
     fetch(url, options)
         .then(function (response) { return response.json(); })
         .then(function (airQualData) {
