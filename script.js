@@ -56,7 +56,7 @@ function getAirBB(cityName) {
     var options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '451b23cea3mshfab079bf5a6b8f6p1d94bcjsne6080d96bc5f',
+            'X-RapidAPI-Key': '103f51fd92mshcba1e6d36482df9p16938fjsn76fc68289de9',
             'X-RapidAPI-Host': 'airbnb13.p.rapidapi.com'
         }
     };
